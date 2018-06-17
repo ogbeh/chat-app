@@ -25,7 +25,7 @@ app.prepare().then(() => {
     const server = express();
 
     server.use(cors());
-    server.user(bodyParser.json());
+    server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({extended: true}));
 
     server.get('*', (req, res) => {
